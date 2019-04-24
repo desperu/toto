@@ -1,5 +1,6 @@
 echo "premier repo git et gihub"
 echo -n "les modif sont elles fonctionnelles?"
+read "$1"
 if [ "$1" = "y" ] || [ "$1" = "Y" ] || [ "$1" = "yes" ];
   then
     echo "Biensûr git et github sont efficasses!"
