@@ -1,10 +1,22 @@
+#!/bin/sh
+
+# petit script pour le plaisir
+
 echo "premier repo git et gihub"
+
 echo -n "les modif sont elles fonctionnelles?(Y/N)"
+
 read rep
-if [ "$rep" = "y" ] || [ "$rep" = "Y" ] || [ "$rep" = "yes" ];
-  then
+
+if [ "$rep" = "y" ] || [ "$rep" = "Y" ] || [ "$rep" = "yes" ] || [ "$rep" = "YES" ]; then
     echo "Biensûr git et github sont efficasses!"
+  elif [ "$rep" = "n" ] || [ "$rep" = "N" ] || [ "$rep" = "non" ] || [ "$rep" = "NON" ]; then
+    echo "Mais heureusement que si!"
   else
-    echo "Vous vous êtes trompé!"
- fi
- exit 0
+    echo "Vous vous êtes trompé!(Y/N)"
+fi
+
+time=$( date )
+(echo $time, answer= $rep) >> historique
+
+exit 0
